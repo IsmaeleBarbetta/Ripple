@@ -1,0 +1,3 @@
+[submodule "Ripple/Vendor/spdlog"]
+	path = Ripple/Vendor/spdlog
+	url = https://github.com/gabime/spdlog
