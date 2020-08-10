@@ -5,7 +5,7 @@ project(Ripple VERSION 0.1 DESCRIPTION "Simple 2D game engine for c++.")
 include(GNUInstallDirs)
 
 # Ripple Library
-add_library(Ripple SHARED src/Ripple.h src/Ripple/Log/Log.cpp src/Ripple/Log/Log.h src/rpph.h)
+add_library(Ripple SHARED src/Ripple.h src/Ripple/Log/Log.cpp src/Ripple/Log/Log.h src/rpph.h src/Ripple/Core/Application.cpp src/Ripple/Core/Application.h src/Ripple/Core/Base.h src/Ripple/Core/EntryPoint.h)
 # !Ripple Library
 
 # Include dirs
