@@ -12,6 +12,7 @@ namespace Ripple {
   class WindowMoveEvent : public Event {
   public:
     WindowMoveEvent(float x, float y) : fX(x), fY(y) {}
+    ~WindowMoveEvent() = default;
 
     SET_TYPE(WindowMove);
     SET_CATEGORY(EC_APPLICATION);
@@ -23,16 +24,37 @@ namespace Ripple {
   class WindowResizeEvent : public Event{
   public:
     WindowResizeEvent(unsigned int width, unsigned int height) : uWidth(width), uHeight(height) {}
+    ~WindowResizeEvent() = default;
+
     unsigned int getUWidth() const;
     void setUWidth(unsigned int uWidth);
     unsigned int getUHeight() const;
     void setUHeight(unsigned int uHeight);
 
+    SET_TYPE(WindowResize)
+    SET_CATEGORY(EC_APPLICATION)
+
   private:
     unsigned int uWidth, uHeight;
   };
 
+  class WindowFocusEvent : public Event {
+  public:
+    WindowFocusEvent() = default;
+    ~WindowFocusEvent() = default;
 
+    SET_TYPE(WindowFocus)
+    SET_CATEGORY(EC_APPLICATION)
+  };
+
+  class WindowLostFocusEvent : public Event {
+  public:
+    WindowLostFocusEvent() = default;
+    ~WindowLostFocusEvent() = default;
+
+    SET_TYPE(WindowLostFocus)
+    SET_CATEGORY(EC_APPLICATION)
+  };
 
 }
 
