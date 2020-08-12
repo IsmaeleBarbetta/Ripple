@@ -36,7 +36,6 @@ enum E_CATEGORY {
   EC_INPUT       = BIT(1u),
   EC_KEYBOARD    = BIT(2u),
   EC_MOUSE       = BIT(3u),
-  EC_MOUSEBUTTON = BIT(4u)
 };
 
 inline bool operator&(E_CATEGORY a, E_CATEGORY b) {

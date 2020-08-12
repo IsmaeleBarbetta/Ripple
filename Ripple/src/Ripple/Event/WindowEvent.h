@@ -17,6 +17,8 @@ namespace Ripple {
     SET_TYPE(WindowMove);
     SET_CATEGORY(EC_APPLICATION);
 
+    std::string toString() const override;
+
   private:
     float fX, fY;
   };
@@ -34,6 +36,8 @@ namespace Ripple {
     SET_TYPE(WindowResize)
     SET_CATEGORY(EC_APPLICATION)
 
+    std::string toString() const override;
+
   private:
     unsigned int uWidth, uHeight;
   };
@@ -45,6 +49,8 @@ namespace Ripple {
 
     SET_TYPE(WindowFocus)
     SET_CATEGORY(EC_APPLICATION)
+
+    std::string toString() const override;
   };
 
   class WindowLostFocusEvent : public Event {
@@ -54,6 +60,20 @@ namespace Ripple {
 
     SET_TYPE(WindowLostFocus)
     SET_CATEGORY(EC_APPLICATION)
+
+    std::string toString() const override;
+  };
+
+  class WindowCloseEvent : public Event {
+  public:
+    WindowCloseEvent() = default;
+    ~WindowCloseEvent() = default;
+
+    SET_TYPE(WindowClose)
+    SET_CATEGORY(EC_APPLICATION)
+
+    std::string toString() const override;
+
   };
 
 }
