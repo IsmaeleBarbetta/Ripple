@@ -5,11 +5,6 @@
 #ifndef RIPPLEFULL_RIPPLE_HPP
 #define RIPPLEFULL_RIPPLE_HPP
 
-#include "Messages/MessageBus.hpp"
-#include "Systems/System.hpp"
-
-int main() {
-    return 0;
-}
+#include "rppch.hpp"
 
 #endif    //RIPPLEFULL_RIPPLE_HPP

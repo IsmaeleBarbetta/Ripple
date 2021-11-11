@@ -3,13 +3,14 @@ project(Ripple VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_library(Ripple STATIC Ripple.hpp src/rppch.hpp)
+add_library(Ripple STATIC src/Ripple.hpp src/rppch.hpp src/main.cpp)
 
 set_target_properties(
         Ripple
         PROPERTIES
             CXX_STANDARD 20
             CXX_EXTENSION NO
+            PREFIX ""
 )
 
 add_subdirectory(vendor/glfw)
