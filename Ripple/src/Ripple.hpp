@@ -5,6 +5,7 @@
 #ifndef RIPPLEFULL_RIPPLE_HPP
 #define RIPPLEFULL_RIPPLE_HPP
 
-#include "rppch.hpp"
+#include "Core/EntryPoint.hpp"
+#include "Core/Application.hpp"
 
 #endif    //RIPPLEFULL_RIPPLE_HPP

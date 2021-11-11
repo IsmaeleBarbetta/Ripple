@@ -3,7 +3,7 @@ project(Ripple VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_library(Ripple STATIC src/Ripple.hpp src/rppch.hpp src/main.cpp)
+add_library(Ripple STATIC src/Ripple.hpp src/rppch.hpp src/main.cpp src/Core/Application.cpp src/Core/Application.hpp src/Core/EntryPoint.hpp)
 
 set_target_properties(
         Ripple
